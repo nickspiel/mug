@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "MUG (Most Upvoted Git)",
+  "version": "1.0",
+  "description": "A chrome extension to find the most upvoted comments on Github issues and pull requests.",
+  "icons": {
+    "16": "images/mug-16.png",
+    "32": "images/mug-32.png",
+    "48": "images/mug-48.png",
+    "128": "images/mug-128.png"
+  },
+  "permissions": [
+    "webNavigation"
+  ],
+  "content_scripts": [
+    {
+      "js": [
+        "scripts/content.js"
+      ],
+      "matches": [
+        "https://github.com/*"
+      ]
+    }
+  ]
+}
